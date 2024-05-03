@@ -1,0 +1,27 @@
+<div>
+    <h3>Entregar fecha</h3>
+
+    <form [formGroup]="formdelivery" (ngSubmit)="Enviar()">
+
+        <mat-form-field>
+            <mat-label for="fecha">Fecha</mat-label>
+            <input formControlName="fecha" class="form-control" [matDatepicker]="picker" >
+            <mat-hint>DD/MM/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"> </mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label for="hora">Hora</mat-label>
+            <input formControlName="hora" class="form-control" type="text" >
+            <mat-hint>HH:MM</mat-hint>
+        </mat-form-field>
+
+        <button mat-raised-button color="accent" type="submit" >Enviar</button>
+
+    </form>
+
+    
+    <app-display> </app-display>
+
+</div>
